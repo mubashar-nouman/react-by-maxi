@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Person extends Component {
-  render() {
-    return (
-      <div>
-        <p>I am a {this.props.name} and age is {this.props.age}</p>
-      </div>
-    )
-  }
+export default function Person(props) {
+  return (
+    <div>
+      <p>I am {props.name} and I am {props.age} years old</p>
+      <p>{props.children}</p>
+    </div>
+  )
 }
